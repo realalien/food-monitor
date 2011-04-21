@@ -11,7 +11,7 @@ development:
   reconnect: false
   database: foods_monitor_development
   pool: 5
-  username: root
+  username: realalien
   password:
   host: localhost
 
@@ -24,7 +24,7 @@ test:
   reconnect: false
   database: foods_monitor_test
   pool: 5
-  username: root
+  username: realalien
   password:
   host: localhost
 
@@ -34,6 +34,6 @@ production:
   reconnect: false
   database: foods_monitor_production
   pool: 5
-  username: root
+  username: realalien
   password:
   host: localhost
