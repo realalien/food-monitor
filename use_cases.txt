@@ -1,0 +1,8 @@
+
+# To not forget some design idea, some user cases are recorded here
+
+>>> After non-login user input a product info, then sign in or sign up, if it's the same user session, should allow user
+   have personal records of the food product. This allow user to buffer the products info in a market place and then login after
+   leaving the market without raising much attention
+   
+   

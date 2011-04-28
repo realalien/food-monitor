@@ -1,1 +1,12 @@
 please see the EverNotes named 'PRJ: Food Monitor'
+
+
+Q: how to delete an existing db migration?
+A: 
+
+SUG:  when generate model, try to use '<column>:references' as a datatype when creating relations.
+
+
+
+康青牌锅巴
+6935930400450
