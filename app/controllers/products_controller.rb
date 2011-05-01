@@ -42,9 +42,11 @@ class ProductsController < ApplicationController
   def create
     @product = Product.new(params[:product])
     
-    # update relation with Users 
+    # update relation with Users  
+    # TODO: should allow user buffer the scanned products in his session. Probably via another table to keep temporary record or on user machine?
+     
     if current_user
-        
+        @product.users << current_user 
     end
     
     respond_to do |format|

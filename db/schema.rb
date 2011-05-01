@@ -10,11 +10,20 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110421093526) do
+ActiveRecord::Schema.define(:version => 20110428012907) do
 
   create_table "products", :force => true do |t|
     t.string   "name"
     t.string   "barcode"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "scan_records", :force => true do |t|
+    t.integer  "user_id"
+    t.integer  "product_id"
+    t.datetime "last_scan"
+    t.string   "details"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

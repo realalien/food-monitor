@@ -1,6 +1,6 @@
 class User < ActiveRecord::Base
-
-  has_many products
+  has_many :scan_records
+  has_many :products, :through => :scan_records  # TODO: delete dependencies 
     
   # Include default devise modules. Others available are:
   # :token_authenticatable, :encryptable, :confirmable, :lockable, :timeoutable and :omniauthable
