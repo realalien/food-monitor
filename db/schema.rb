@@ -10,7 +10,40 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110428012907) do
+ActiveRecord::Schema.define(:version => 20110503084442) do
+
+  create_table "organizations", :force => true do |t|
+    t.string   "name"
+    t.integer  "country_code"
+    t.integer  "city_code"
+    t.string   "address"
+    t.string   "address_en"
+    t.string   "office_tel"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "product_details", :force => true do |t|
+    t.integer  "product_id"
+    t.float    "net_weight_g"
+    t.string   "pkg_unit"
+    t.integer  "shelf_life_d"
+    t.string   "std_followed"
+    t.string   "aggregate_info"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.string   "name"
+  end
+
+  create_table "product_organizations", :force => true do |t|
+    t.integer  "product_id"
+    t.integer  "organization_id"
+    t.string   "role"
+    t.integer  "added_by_user"
+    t.datetime "last_update"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "products", :force => true do |t|
     t.string   "name"

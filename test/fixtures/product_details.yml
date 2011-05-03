@@ -1,0 +1,17 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  product_id: 1
+  net_weight_g: 1.5
+  pkg_unit: MyString
+  shelf_life_d: 1
+  std_followed: MyString
+  aggregate_info: MyString
+
+two:
+  product_id: 1
+  net_weight_g: 1.5
+  pkg_unit: MyString
+  shelf_life_d: 1
+  std_followed: MyString
+  aggregate_info: MyString
