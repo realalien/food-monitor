@@ -11,10 +11,12 @@
     </div>
   <% end %>
 
-  <div class="field">
-    <%= f.label :product_id %><br />
-    <%= f.text_field :product_id %>
+<!-- product id is not supposed to be visible -->
+   <div class="field">
+    <%= f.label :name %><br />
+    <%= f.text_field :name %>
   </div>
+  
   <div class="field">
     <%= f.label :net_weight_g %><br />
     <%= f.text_field :net_weight_g %>
