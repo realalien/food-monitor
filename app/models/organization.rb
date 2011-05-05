@@ -11,4 +11,5 @@ class Organization < ActiveRecord::Base
         # SUG: try to use multiple map service to pin point the accurate address and geo code.
     end
     
+    
 end

@@ -30,6 +30,27 @@
   <%= @organization.office_tel %>
 </p>
 
+<p>
+  <b>Latitude:</b>
+  <%= @organization.latitude %>
+</p>
+
+<p>
+  <b>Longitude:</b>
+  <%= @organization.longitude %>
+</p>
+
+<p>
+  <b>Geocode:</b>
+  <%= Geocoder.coordinates(@organization.address) %>
+</p>
+
 
 <%= link_to 'Edit', edit_organization_path(@organization) %> |
 <%= link_to 'Back', organizations_path %>
+
+
+
+ <h2>for Rails 3+ you need to make use of 'raw'  </h2>
+ <%= raw Cartographer::Header.new.to_s %>
+ <%= raw @map.to_html %>
