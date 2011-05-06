@@ -1,4 +1,6 @@
 FoodsMonitor::Application.routes.draw do
+  resources :product_detail_entries
+
   resources :organizations
 
   resources :product_details

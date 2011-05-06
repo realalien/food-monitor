@@ -43,42 +43,15 @@
 <h2>TODO:submit a refined version</h2>
 
 <h2> Interesting! Related organzations modification</h2>
-<% form_for(@product_detail) do | pd |%>
-  <% pd.fields_for :product_organizations  do | po |%>
-     <div class="field">
-       <%= po.label :role %><br />
-       <%= po.text_field :role %>
-     </div>
-     <% po.fields_for :organization do | of | %>
-     <!--TODO: should reuse the _form of organization -->
-        <div class="field">
-          <%= f.label :name %><br />
-          <%= f.text_field :name %>
-        </div>
-        <div class="field">
-          <%= f.label :country_code %><br />
-          <%= f.text_field :country_code %>
-        </div>
-        <div class="field">
-          <%= f.label :city_code %><br />
-          <%= f.text_field :city_code %>
-        </div>
-        <div class="field">
-          <%= f.label :address %><br />
-          <%= f.text_field :address %>
-        </div>
-        <div class="field">
-          <%= f.label :address_en %><br />
-          <%= f.text_field :address_en %>
-        </div>
-        <div class="field">
-          <%= f.label :office_tel %><br />
-          <%= f.text_field :office_tel %>
-        </div>
-        <div class="actions">
-          <%= f.submit %>
-        </div>
-     <% end %>
-  <% end%>
+<!-- later for data aggregation use. After all, it's not a good idea to edit info in one show page, probably, ajax things?
+<%= form_for(@product_detail) do | pd |%>
+   <% render :%>
 <% end%>
+-->
+
+
+
+
+
+
 

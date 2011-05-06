@@ -18,7 +18,7 @@ class ProductDetailsController < ApplicationController
     # try to edit product's organizations in product show ?
     # Q: is it normal way for editing? what's better way?
     # Q: 
-    @product_detail.product_organizations.build.build_organization
+    @product_detail.product_detail_organizations.build.build_organization
     respond_to do |format|
       format.html # show.html.erb
       format.xml  { render :xml => @product_detail }

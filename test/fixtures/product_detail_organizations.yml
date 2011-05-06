@@ -1,0 +1,15 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  product_detail_id: 1
+  organization_id: 1
+  role: MyString
+  added_by_user: 1
+  last_update: 2011-05-06 10:44:53
+
+two:
+  product_detail_id: 1
+  organization_id: 1
+  role: MyString
+  added_by_user: 1
+  last_update: 2011-05-06 10:44:53
