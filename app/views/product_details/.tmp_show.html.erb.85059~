@@ -1,0 +1,57 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Product:</b>
+  <%= @product_detail.product_id %>
+</p>
+
+
+<p>
+  <b>Product Name:</b>
+  <%= @product_detail.name %>
+</p>
+
+<p>
+  <b>Net weight g:</b>
+  <%= @product_detail.net_weight_g %>
+</p>
+
+<p>
+  <b>Pkg unit:</b>
+  <%= @product_detail.pkg_unit %>
+</p>
+
+<p>
+  <b>Shelf life d:</b>
+  <%= @product_detail.shelf_life_d %>
+</p>
+
+<p>
+  <b>Std followed:</b>
+  <%= @product_detail.std_followed %>
+</p>
+
+<p>
+  <b>Aggregate info:</b>
+  <%= @product_detail.aggregate_info %>
+</p>
+
+
+<%= link_to 'Edit', edit_product_detail_path(@product_detail) %> |
+<%= link_to 'Back', product_details_path %>
+
+<h2>TODO:submit a refined version</h2>
+
+<h2> Interesting! Related organzations modification</h2>
+<!-- later for data aggregation use. After all, it's not a good idea to edit info in one show page, probably, ajax things?
+<%= form_for(@product_detail) do | pd |%>
+   <% render :%>
+<% end%>
+-->
+
+
+
+
+
+
+

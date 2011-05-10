@@ -42,13 +42,28 @@
 
 <h2>TODO:submit a refined version</h2>
 
-<h2> Interesting! Related organzations modification</h2>
-<!-- later for data aggregation use. After all, it's not a good idea to edit info in one show page, probably, ajax things?
-<%= form_for(@product_detail) do | pd |%>
-   <% render :%>
-<% end%>
--->
 
+<!-- later for data aggregation use. After all, it's not a good idea to edit info in one show page, probably, ajax things?-->
+
+<h2>User contributed Organizations </h2>
+<% @product_detail.product_detail_organizations.each do | item | %>
+   <%= item.role%> : <%= item.orgname %><br/>
+<% end %>
+<br>Refine the name and role?</br>
+<br>Not find on the map, pin it down on map?  marker with question mark(Human life is at stake!! You can help!)</br>
+
+<h2> Organization map, may be useful to display on the user' profile pages.</h2>
+# for Rails 3+ you need to make use of 'raw'
+  <%= raw Cartographer::Header.new.to_s %>
+  <%= raw @map.to_html %>
+  <div style="width:600px;height:400px;" id="map" > [Map] </div>
+
+
+
+<h2>User contributed key/value entries </h2>
+<% @product_detail.product_detail_entries.each do | item | %>
+   <%= item.name%> : <%= item.value %>
+<% end %>
 
 
 

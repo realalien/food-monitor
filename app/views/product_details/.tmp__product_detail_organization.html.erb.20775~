@@ -1,0 +1,12 @@
+ <%= pd.fields_for :product_detail_organizations  do | po |%>
+     <div class="field">
+       <%= po.label :role %><br />
+       <%= po.text_field :role %>
+     </div>
+     
+     <% render 'product_detail_organizations', :f => po %>
+       
+     <div class="actions">
+          <%= of.submit %>
+     </div>
+  <% end%>

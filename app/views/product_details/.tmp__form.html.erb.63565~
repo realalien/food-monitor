@@ -37,22 +37,15 @@
     <%= f.label :aggregate_info %><br />
     <%= f.text_field :aggregate_info %>
   </div>
-  
-  <h3> Interesting! Related organzations modification</h3>
-  <h4>IDEA: if this is a personal page(may be in form of widget), </h4> 
-  <%= f.fields_for :product_detail_organizations do | builder | %>
-     <%= render "role_organizations" , :f => builder %>
-  <% end %>
-  
-  <h3> User Contributed Entries</h3>
-  <%= f.fields_for :product_detail_entries do | builder | %>
-     <%= render "product_detail_entries" , :f => builder %>
-  <% end %>
-  
   <div class="actions">
     <%= f.submit %>
   </div>
   
+  <h3> Interesting! Related organzations modification, TODO, see how edit multiple entries on one page</h3>
+  <% f.fields_for :qu  %> 
+
+    
 <% end %>
   
   
+<% end %>

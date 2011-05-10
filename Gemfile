@@ -4,7 +4,7 @@ gem 'rails', '3.0.7'
 gem 'devise'
 gem "geocoder"
 
-# gem 'geokit-rails3'
+# gem 'geokit-rails3'  # candidate, haven't tried out the functionalities.
 
 
 # Bundle edge Rails instead:
