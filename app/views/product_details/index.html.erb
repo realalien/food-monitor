@@ -2,7 +2,8 @@
 
 <table>
   <tr>
-    <th>Product</th>
+    <th>Product Name</th>
+    <th>Barcode</th>
     <th>Net weight g</th>
     <th>Pkg unit</th>
     <th>Shelf life d</th>
@@ -15,7 +16,8 @@
 
 <% @product_details.each do |product_detail| %>
   <tr>
-    <td><%= product_detail.product_id %></td>
+    <td><%= product_detail.product_name %></td>
+    <td><%= product_detail.barcode %></td>
     <td><%= product_detail.net_weight_g %></td>
     <td><%= product_detail.pkg_unit %></td>
     <td><%= product_detail.shelf_life_d %></td>

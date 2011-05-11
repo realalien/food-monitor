@@ -1,4 +1,7 @@
 FoodsMonitor::Application.routes.draw do
+  get "basic/search"
+  post "basic/handle_barcode_search"
+
   resources :product_detail_entries
 
   resources :organizations
@@ -8,6 +11,12 @@ FoodsMonitor::Application.routes.draw do
   devise_for :users
 
   resources :products
+  
+  resources :users do
+    resources :product_details do
+      post 'bulk_update', :on => :collection
+    end
+  end
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
@@ -58,7 +67,7 @@ FoodsMonitor::Application.routes.draw do
 
   # You can have the root of your site routed with "root"
   # just remember to delete public/index.html.
-  root :to =>  "products#index"
+  root :to =>  "product_details#index"
 
   # See how all your routes lay out with "rake routes"
 

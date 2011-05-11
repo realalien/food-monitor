@@ -12,9 +12,14 @@
   <% end %>
 
 <!-- product id is not supposed to be visible -->
-   <div class="field">
-    <%= f.label :name %><br />
-    <%= f.text_field :name %>
+  <div class="field">
+    <%= f.label :product_name %><br />
+    <%= f.text_field :product_name %>
+  </div>
+  
+  <div class="field">
+    <%= f.label :barcode %><br />
+    <%= f.text_field :barcode %>
   </div>
   
   <div class="field">
@@ -34,7 +39,7 @@
     <%= f.text_field :std_followed %>
   </div>
   <div class="field">
-    <%= f.label :aggregate_info %><br />
+    <%= f.label :aggregate_info %><br/>
     <%= f.text_field :aggregate_info %>
   </div>
   

@@ -95,6 +95,12 @@ class ProductDetailsController < ApplicationController
        logger.debug "Product Info: #{@product.inspect}"
        @product_detail[:product_id] = pid
     end 
+    
+    # support for user based entries
+    if current_user
+      @product_detail.user = current_user
+    end
+    
     respond_to do |format|
       if @product_detail.save
         format.html { redirect_to(@product_detail, :notice => 'Product detail was successfully created.') }
@@ -133,4 +139,15 @@ class ProductDetailsController < ApplicationController
       format.xml  { head :ok }
     end
   end
+  
+  
+  # sandbox of bulk update of 
+  # ref. http://stackoverflow.com/questions/5368947/rails-updating-multiple-nested-attributes-restfully
+  def bulk_update
+    if current_user
+      @user = User.find(current_user.id)  # TODO: is it necessary to find user? 
+      @product_details = @user.product_details 
+    end
+  end
+  
 end

@@ -8,7 +8,12 @@
 
 <p>
   <b>Product Name:</b>
-  <%= @product_detail.name %>
+  <%= @product_detail.product_name %>
+</p>
+
+<p>
+  <b>Product barcode:</b>
+  <%= @product_detail.barcode %>
 </p>
 
 <p>
@@ -36,6 +41,10 @@
   <%= @product_detail.aggregate_info %>
 </p>
 
+<p>
+  <b>Contributed User:</b>
+  <%= @product_detail.user.id %>
+</p>
 
 <%= link_to 'Edit', edit_product_detail_path(@product_detail) %> |
 <%= link_to 'Back', product_details_path %>

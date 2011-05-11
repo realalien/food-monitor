@@ -1,4 +1,8 @@
 class ProductDetail < ActiveRecord::Base
+  
+    # support for user based 
+    belongs_to :user
+  
     belongs_to :product    # one-to-one relation
     
     has_many :product_detail_organizations    # many-to-many relations
@@ -9,4 +13,7 @@ class ProductDetail < ActiveRecord::Base
     # many-to-many relations without intermediate table
     has_many :product_detail_entries
     accepts_nested_attributes_for :product_detail_entries, :reject_if => lambda { |a| a[:name].blank?  || a[:value].blank? }, :allow_destroy => false
+    
+    
+    
 end
