@@ -1,0 +1,36 @@
+<p id="notice"><%= notice %></p>
+
+
+<% if @user%>
+  How many entries I have contributed?  <%= @user.product_details.size %>  <br/> <br/>
+  
+  Actually, of those entries, collected in the database, there are : <br/>
+  TODO: after compare with machine generated entries of formal product detail, set the product_details(user based)<br/><br/>   
+  
+  Lasted entries input: <br/>
+  <% @user.product_details.each do | p | %>
+    Product:  <%= p.product_name %>  <br/>
+    Organization: <br/>
+    <%p.product_detail_organizations.each do | org | %>
+    <li> <%=org.role %> : <%=org.orgname %>  | TODO: display icon in the map. | TODO: has an official product name in the aggregate database ?</li>
+    <hr/>
+    <%end %>
+  <% end%>
+  
+  Geographic Distribution:
+  <h2> Organization map, may be useful to display on the user' profile pages.</h2>
+  # for Rails 3+ you need to make use of 'raw'
+  <%= raw Cartographer::Header.new.to_s %>
+  <%= raw @map.to_html %>
+  <div style="width:600px;height:400px;" id="map" > [Map] </div>
+
+
+  
+  
+<% else %>
+  Not logged in? Be a member of the community! <br/>
+  <%= link_to "Sign up", new_user_registration_path %> or <%= link_to "sign in", new_user_session_path %>
+<% end%>
+
+<%= link_to 'Edit', edit_user_path(@user) %> |
+<%= link_to 'Back', users_path %>

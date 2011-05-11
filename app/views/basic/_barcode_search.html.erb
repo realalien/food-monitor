@@ -1,0 +1,14 @@
+<h1>Basic#search</h1>
+<p>Find me in app/views/basic/search.html.erb</p>
+
+
+TODO: for web browser users, try to allow multiple criteria search <br/>
+<%= form_tag(:action => "handle_barcode_search") do | f| %>
+... TODO: add basic validator
+  <div>
+     <%= label_tag :barcode, { :value => "Barcode", :class=> "field"} %><br />
+     <%= text_field_tag :barcode %> <br/>
+  </div>
+    <%= submit_tag "Search", :class => "actions" %>
+  
+ <% end %>
